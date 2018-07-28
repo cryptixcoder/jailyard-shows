@@ -14,7 +14,7 @@ export default class Home extends Component {
 	};
 
 	componentDidMount() {
-		fetch('http://api.tvmaze.com/shows?limit=5')
+		fetch('http://api.tvmaze.com/shows')
 			.then((response) => response.json())
 			.then((data) => {
 				this.setState({ data: data, isLoading: false });
